@@ -1,10 +1,13 @@
 
+
 import './globals.css'
 import { Inter } from 'next/font/google'
 import Footer from '@/components/Footer'
 import PageWrapper from '@/components/PageWrapper'
 import Nav from '@/components/Nav'
 import Presence_Provider from '@/components/Presence_Provider'
+import CursorProvider from '@/Context/CursorContext'
+
 
 export const metadata = {
   title: 'NBeauty',
@@ -17,6 +20,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body >
+
         <Presence_Provider>
         <Nav/>
       <PageWrapper>
@@ -25,7 +29,10 @@ export default function RootLayout({ children }) {
       
       <Footer/>
         </Presence_Provider>
+     
+        
       </body>
+    
       
     </html>
   )
